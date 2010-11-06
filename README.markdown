@@ -13,7 +13,7 @@ In traditional logging and in today's standard logging libraries like Ruby's [Lo
 ####life without tagalog
 - each log entry is in one and only one of the log levels (e.g. `error`, `info`, [xor](http://en.wikipedia.org/wiki/Exclusive_or) `debug`)
 - each log level is ON or OFF in your environment settings
-- this means that if you turn `debug` *on* to work on feature X, your log immediately is flooded with irrelevant `debug` log entries from features Y and Z
+- this means that if you turn `debug` **on** to work on feature X, your log immediately is flooded with irrelevant `debug` log entries from features Y and Z.  this forces you to revisit your code, commenting or deleting logging calls - but some of these calls could come in handy in the future, at which point you'll have to revisit your code again!
 - puppies don't play, babies don't laugh, and it's always winter[(!)](https://gist.github.com/abaec9e62cff3b8a5c1b)
 
 ####life with tagalog
@@ -23,7 +23,7 @@ In traditional logging and in today's standard logging libraries like Ruby's [Lo
 
 
 ###tagalog is easy to implement
-*tagalog* has 
+tagalog has 
 
 ###tagalog is extensible
 If you want to have two subclasses for tagalog, like "DebugLogger"" and "ErrorLogger", you can quite easily.  Just extend tagalog and override what you want to override, such as the path to the output file (ErrorLogger could write to your webserver error logs, for instance)
