@@ -8,7 +8,7 @@
 
 ###A longer explanation (for the unconvinced, the insatiably curious, and the androids among us)
 
-In traditional logging and in today's standard logging libraries like Ruby's [Logger](http://ruby-doc.org/core/classes/Logger.html) class and Python's [Logging](http://docs.python.org/library/logging.html) module, each log entry is assigned a *log level*  (`critical/fatal`, `error`, `warning`, `info`, or `debug`).  In production, the first four are often left 'ON', and the last one, `debug`, is often turned 'OFF'.  That is the extent of customization of log **ON-or-OFFness**!!
+In traditional logging and in today's standard logging libraries like Ruby's [Logger](http://ruby-doc.org/core/classes/Logger.html) class and Python's [Logging](http://docs.python.org/library/logging.html) module, each log entry is assigned a *log level*  (`critical`, `error`, `warning`, `info`, or `debug`).  In production, the first four are often left 'ON', and the last one, `debug`, is often turned 'OFF'.  That is the extent of customization of log **ON-or-OFFness**!!
 
 
 The `debug` level is special because it's used almost exclusively during development and testing of features, and it is most useful when combined with `tail -f`[(?)](http://goo.gl/jFUUJ).
