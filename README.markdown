@@ -20,6 +20,7 @@ In traditional logging and in today's standard logging libraries like Ruby's [Lo
 - Each log entry has zero or more tags.  These tags can be any strings you like -- even `debug`, `error`, `critical`, `warning`, or `info`!
 - Each tag is **on** or **off** in tagalog's code (which you can hook to your environment's settings if you like)
 - tagalog will log an entry once for each associated tag that's set to **on**
+- You develop faster, with less work, and most importantly, *with less code*
 
 
 ####tagalog is easy to implement
