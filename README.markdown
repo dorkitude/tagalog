@@ -1,4 +1,4 @@
-#Why log tagging is better than log levels
+#in which I attempt to convince you that log tagging is better than log levels
 
 
 ###A short and simple explanation via analogy[(?)](http://goo.gl/Wz6sm)
