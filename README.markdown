@@ -11,10 +11,10 @@
 In traditional logging and in today's standard logging libraries like Ruby's [Logger](http://ruby-doc.org/core/classes/Logger.html) class and Python's [Logging](http://docs.python.org/library/logging.html) module, each log entry is assigned a *log level*  (`critical`, `error`, `warning`, `info`, or `debug`).  In production, the first four are often left **on**, and the last one, `debug`, is often turned **off**.
 
 ####life without tagalog
-- each log entry is in one and only one of the log levels (e.g. `error`, `info`, [xor](http://en.wikipedia.org/wiki/Exclusive_or) `debug`)
-- each log level is **on** or **off** in your environment settings
-- this means that if you turn `debug` **on** to work on feature X, your log immediately is flooded with irrelevant `debug` log entries from features Y and Z.  this forces you to revisit your code, commenting or deleting logging calls - but some of these calls could come in handy in the future, at which point you'll have to revisit your code again!
-- puppies don't play, babies don't laugh, and it's always winter[(!)](https://gist.github.com/abaec9e62cff3b8a5c1b)
+- Each log entry is in one and only one of the log levels (e.g. `error`, `info`, [xor](http://en.wikipedia.org/wiki/Exclusive_or) `debug`)
+- Each log level is **on** or **off** in your environment settings
+- This means that if you turn `debug` **on** to work on feature C, your log will be flooded with irrelevant `debug` log entries from long-completed features A and B. This forces you to revisit your code, commenting or deleting logging calls - but some of these calls could come in handy in the future, at which point you'll have to *re* revisit your code again!
+- Puppies don't play, babies don't laugh, and it's always winter[(!)](https://gist.github.com/abaec9e62cff3b8a5c1b)
 
 ####life with tagalog
 - each log entry has zero or more tags
