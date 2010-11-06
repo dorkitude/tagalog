@@ -11,9 +11,9 @@
 In traditional logging and in today's standard logging libraries like Ruby's [Logger](http://ruby-doc.org/core/classes/Logger.html) class and Python's [Logging](http://docs.python.org/library/logging.html) module, each log entry is assigned a *log level*  (`critical`, `error`, `warning`, `info`, or `debug`).  In production, the first four are often left 'ON', and the last one, `debug`, is often turned 'OFF'.  That is the extent of customization of log **ON-or-OFFness**!!
 
 Without tagalog:
--each log entry is in one and only one of the log levels, and
--each log level is ON or OFF in your environment
--puppies don't run, babies don't laugh, and it's always winter (and not the pretty kind... i mean the brown and slushy sort of urban winter, like three hours after the salt trucks. short days and long nights. never-enough-chapstick.)
+    -each log entry is in one and only one of the log levels, and
+    -each log level is ON or OFF in your environment
+    -puppies don't run, babies don't laugh, and it's always winter (and not the pretty kind... i mean the brown and slushy sort of urban winter, like three hours after the salt trucks. short days and long nights. never-enough-chapstick.)
 
 The `debug` level is special because it's used almost exclusively during development and testing of features, and it is most useful when combined with `tail -f`[(?)](http://goo.gl/jFUUJ).
 
