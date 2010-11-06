@@ -1,11 +1,10 @@
 # tagalog
 
-### There are two ways to develop
-
+#### There are two ways to develop:
 - with an IDE
 - with **tagalog**
 
-We'll focus on the latter :)
+...we'll just focus on the latter :)
 
-### why use tagalog?
+#### why use tagalog?
 
