@@ -19,16 +19,18 @@ In traditional logging and in today's standard logging libraries like Ruby's [Lo
 ####life with tagalog
 - each log entry has zero or more tags
 - each tag is **on** or **off** in tagalog's code (which you can hook to your environment's settings if you like)
-- if at least one of the entry's tags is set to **on**, tagalog will log it
+- if an entry has at least one tag that's set to **on**, tagalog will log the entry
 
-
-######tagalog is minimal
 
 ###tagalog is easy to implement
 *tagalog* has 
 
 ###tagalog is extensible
-If you want to have two subclasses for tagalog, like "DebugLogger"" and "ErrorLogger", you can quite easily.  Just override what you want to override, such as the path to the output file (ErrorLogger could )
+If you want to have two subclasses for tagalog, like "DebugLogger"" and "ErrorLogger", you can quite easily.  Just extend tagalog and override what you want to override, such as the path to the output file (ErrorLogger could write to your webserver error logs, for instance)
+
+######tagalog is minimal
+tagalog is one drop-in file, written with so little code that you can learn your way around it in just a few minutes.
+
 
 
 The `debug` level is special because it's used almost exclusively during development and testing of features, and it is most useful when combined with `tail -f`[(?)](http://goo.gl/jFUUJ).
