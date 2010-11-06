@@ -1,4 +1,8 @@
 ###Why log tagging is better than log levels
+The short and simple explanation is by analogy:
+    
+    log levels : log tagging :: Outlook folders : Gmail labels
+
 In traditional logging and in today's standard logging libraries like Ruby's [Logger](http://ruby-doc.org/core/classes/Logger.html) class and Python's [Logging](http://docs.python.org/library/logging.html) module, each log entry is assigned a *log level*  (`critical/fatal`, `error`, `warning`, `info`, or `debug`).  In production, the first four are often left on, and the last one, `debug`, is often turned off.
 
 The `debug` level is special because it's used almost exclusively during development and testing of features.  `debug` is most useful when combined with `tail -f` [1](http://goo.gl/jFUUJ)
