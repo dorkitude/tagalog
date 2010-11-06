@@ -13,7 +13,7 @@ In traditional logging and in today's standard logging libraries like Ruby's [Lo
 Without tagalog:
     -each log entry is in one and only one of the log levels, and
     -each log level is ON or OFF in your environment
-    -puppies don't run, babies don't laugh, and it's always winter (and not the pretty kind... i mean the brown and slushy sort of urban winter, like three hours after the salt trucks. short days and long nights. never-enough-chapstick.)
+    -puppies don't play, babies don't laugh, and it's always winter (and not the pretty kind... i mean the brown and slushy sort of urban winter, like three hours after the salt trucks. short days and long nights. never-enough-chapstick.)
 
 The `debug` level is special because it's used almost exclusively during development and testing of features, and it is most useful when combined with `tail -f`[(?)](http://goo.gl/jFUUJ).
 
