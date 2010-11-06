@@ -13,56 +13,22 @@ In traditional logging and in today's standard logging libraries like Ruby's [Lo
 ####life without tagalog
 - Each log entry is in one and only one of the log levels (e.g. `error`, `info`, [xor](http://en.wikipedia.org/wiki/Exclusive_or) `debug`)
 - Each log level is **on** or **off** in your environment settings
-- This means that if you turn `debug` **on** to work on feature C, your log will be flooded with irrelevant `debug` log entries from long-completed features A and B. This forces you to revisit your code, commenting or deleting logging calls - but some of these calls could come in handy in the future, at which point you'll have to *re* revisit your code again!
+- This means that if you turn `debug` **on** to work on feature C, your log will be flooded with irrelevant `debug` log entries from long-completed features A and B. This forces you to revisit your A and B code, commenting or deleting logging calls - but some of these calls could come in handy in the future, at which point you'll have to *re* revisit your code again!
 - Puppies don't play, babies don't laugh, and it's always winter[(!)](https://gist.github.com/abaec9e62cff3b8a5c1b)
 
 ####life with tagalog
 - Each log entry has zero or more tags.  These tags can be any strings you like -- even `debug`, `error`, `critical`, `warning`, or `info`!
-- each tag is **on** or **off** in tagalog's code (which you can hook to your environment's settings if you like)
-- if an entry has at least one tag that's set to **on**, tagalog will log the entry
+- Each tag is **on** or **off** in tagalog's code (which you can hook to your environment's settings if you like)
+- If an entry has at least one tag that's set to **on**, tagalog will log the entry
 
 
 ###tagalog is easy to implement
-tagalog has 
+tagalog has is a single drop-in file, and you only need to know one function:
+    **log(message, tagging)**
+where 'message' is a string or a serializable native type, and 'tagging' is either a string tag or an array of string tags.
 
 ###tagalog is extensible
 If you want to have two subclasses for tagalog, like "DebugLogger"" and "ErrorLogger", you can quite easily.  Just extend tagalog and override what you want to override, such as the path to the output file (ErrorLogger could write to your webserver error logs, for instance)
 
-######tagalog is minimal
+###tagalog is minimal
 tagalog is one drop-in file, written with so little code that you can learn your way around it in just a few minutes.
-
-
-
-The `debug` level is special because it's used almost exclusively during development and testing of features, and it is most useful when combined with `tail -f`[(?)](http://goo.gl/jFUUJ).
-
-This sort of logging  For instance, you might use `debug` to 
-
-Some common uses for `debug` log level in standard practice include 
-
-That leaves you with one giant `debug` bucket, into which all development/debug
-
-
-
-For many devs, the `debug` and `info` levels equate to "levels I can use during development"
-
-Okay, I admit it: the heading for this section is unnecessarily divisive.  Log levels have their place
-
-Log levels (either numerical or something like `debug`, `info`, `critical`)
-
-etc etc
-
-#### before tagalog
-
-here i am editing `feature1.py`
-    def factory(inputDictionary):
-        # i wonder what's going on in the input dictionary
-    
-
-#### There are two ways to develop:
-- with an IDE
-- with **tagalog**
-
-...we'll just focus on the latter :)
-
-#### why use tagalog?
-
