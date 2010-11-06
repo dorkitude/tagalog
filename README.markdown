@@ -17,7 +17,7 @@ In traditional logging and in today's standard logging libraries like Ruby's [Lo
 - Puppies don't play, babies don't laugh, and it's always winter[(!)](https://gist.github.com/abaec9e62cff3b8a5c1b)
 
 ####life with tagalog
-- Each log entry has zero or more tags.  These tags can be any strings you like -- even `debug` `error` `critical` `warning` `info`!!!
+- Each log entry has zero or more tags.  These tags can be any strings you like -- even `debug`, `error`, `critical`, `warning`, or `info`!
 - each tag is **on** or **off** in tagalog's code (which you can hook to your environment's settings if you like)
 - if an entry has at least one tag that's set to **on**, tagalog will log the entry
 
