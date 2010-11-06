@@ -8,12 +8,27 @@
 
 ###A longer explanation (for the unconvinced, the insatiably curious, and the androids among us)
 
-In traditional logging and in today's standard logging libraries like Ruby's [Logger](http://ruby-doc.org/core/classes/Logger.html) class and Python's [Logging](http://docs.python.org/library/logging.html) module, each log entry is assigned a *log level*  (`critical`, `error`, `warning`, `info`, or `debug`).  In production, the first four are often left 'ON', and the last one, `debug`, is often turned 'OFF'.  That is the extent of customization of log **ON-or-OFFness**!!
+In traditional logging and in today's standard logging libraries like Ruby's [Logger](http://ruby-doc.org/core/classes/Logger.html) class and Python's [Logging](http://docs.python.org/library/logging.html) module, each log entry is assigned a *log level*  (`critical`, `error`, `warning`, `info`, or `debug`).  In production, the first four are often left **on**, and the last one, `debug`, is often turned **off**.
 
-####Without tagalog
+####life without tagalog
 - each log entry is in one and only one of the log levels (e.g. `error`, `info`, [xor](http://en.wikipedia.org/wiki/Exclusive_or) `debug`)
-- each log level is ON or OFF in your environment
+- each log level is ON or OFF in your environment settings
+- this means that if you turn `debug` *on* to work on feature X, your log immediately is flooded with irrelevant `debug` log entries from features Y and Z
 - puppies don't play, babies don't laugh, and it's always winter[(!)](https://gist.github.com/abaec9e62cff3b8a5c1b)
+
+####life with tagalog
+- each log entry has zero or more tags
+- each tag is **on** or **off** in tagalog's code (which you can hook to your environment's settings if you like)
+- if at least one of the entry's tags is set to **on**, tagalog will log it
+
+
+######tagalog is minimal
+
+###tagalog is easy to implement
+*tagalog* has 
+
+###tagalog is extensible
+If you want to have two subclasses for tagalog, like "DebugLogger"" and "ErrorLogger", you can quite easily.  Just override what you want to override, such as the path to the output file (ErrorLogger could )
 
 
 The `debug` level is special because it's used almost exclusively during development and testing of features, and it is most useful when combined with `tail -f`[(?)](http://goo.gl/jFUUJ).
