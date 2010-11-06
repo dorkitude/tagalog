@@ -1,5 +1,5 @@
 ###The different between log tagging and log levels
-In traditional logging libraries like Ruby's [Logger](http://ruby-doc.org/core/classes/Logger.html) and Python's [Logging](http://docs.python.org/library/logging.html), each log entry is assigned a `log level`, such as 'fatal', 'error', 'warn', 'info', or 'debug'.
+In traditional logging libraries like Ruby's [Logger](http://ruby-doc.org/core/classes/Logger.html) and Python's [Logging](http://docs.python.org/library/logging.html), each log entry is assigned a `log level`, such as `fatal`, `error`, `warn`, `info`, or `debug`.
 
 ###Why log tagging is better than log levels
 Okay, I admit it: the heading for this section is unnecessarily divisive.  Log levels have their place
