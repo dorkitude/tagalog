@@ -1,5 +1,6 @@
 #Why log tagging is better than log levels
 
+
 ####A short and simple explanation via analogy[(?)](http://goo.gl/Wz6sm)
     log levels : log tagging :: Outlook folders : Gmail labels
 
