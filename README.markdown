@@ -26,7 +26,7 @@ In traditional logging and in today's standard logging libraries like Ruby's [Lo
 ####tagalog is easy to implement
 tagalog has is a single drop-in file, and you only need to know one function:
     log(message, tagging)
-...where 'message' is a string or a stringable native type, and 'tagging' is either a string tag or an array of string tags.
+...where 'message' is a string or a stringable type[(?)](https://gist.github.com/e612159e53782a28b30b), and 'tagging' is either a string tag or an array of string tags.
 
 ####tagalog is extensible
 If you want to have two subclasses for tagalog, like "DebugLogger"" and "ErrorLogger", you can quite easily.  Just extend tagalog and override what you want to override, such as the path to the output file (ErrorLogger could write to your webserver error logs, for instance)
