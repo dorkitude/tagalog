@@ -13,7 +13,7 @@ In traditional logging and in today's standard logging libraries like Ruby's [Lo
 ####life with log levels
 - Each log entry is in one and only one of the log levels (e.g. `error`, `info`, [xor](http://en.wikipedia.org/wiki/Exclusive_or) `debug`)
 - Each log level is **on** or **off** in your environment settings
-- This means that if, to work on feature C, you turn `debug` **on**, and suddenly your log is flooded with irrelevant `debug` log entries from long-completed features A and B. This forces you to revisit your A and B code, commenting or deleting logging calls - but some of these calls could come in handy in the future, at which point you'll have to *re* revisit your code again!
+- This means that if, in order to work on Feature C, you turn `debug` **on**, your log will suddenly be flooded with irrelevant `debug` log entries from long-completed Features A and B. This forces you to revisit your A and B code, commenting or deleting logging calls - but some of these calls could come in handy in the future, at which point you'll have to *re* revisit your code again!
 - Puppies don't play, lovers don't love, and it's always winter[(!)](https://gist.github.com/abaec9e62cff3b8a5c1b)
 
 ####life with log tagging, thanks to tagalog!
