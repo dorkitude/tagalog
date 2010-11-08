@@ -25,14 +25,14 @@ class Tagalog
   def self.log(message, tagging=:untagged)
     return false if @@config[:kill_switch]
 
-    tag_list = self.get_tag_list tagging
-    return false if tag_list.empty?
+    loggable_tags = self.get_loggable_tags tagging
+    return false if loggable_tags.empty?
     
     message = self.format_message message
     
     time_string = Time.now.strftime("%Y-%m-%d @ %H:%m:%S")
     
-    for tag in tag_list
+    for tag in loggable_tags
       this_message = "#{time_string} [ #{tag} ]  #{message}"
       self.write_message this_message
     end
@@ -52,7 +52,7 @@ class Tagalog
   end
   
 
-  def self.get_tag_list(tagging)
+  def self.get_loggable_tags(tagging)
     if tagging.class == Symbol
       tags = [tagging]
     elsif tagging.class == Array
@@ -63,7 +63,7 @@ class Tagalog
     end
 
     return tags
-  end # self.get_tag_list
+  end # self.get_loggable_tags
   
 end  # class Tagalog
 
