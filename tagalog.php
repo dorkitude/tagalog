@@ -167,7 +167,7 @@
 /*    
     <license stuff>
     
-    Tagalog.php is licensed under The MIT License
+    tagalog.php is licensed under The MIT License
 
     Copyright (c) 2010 Kyle Wild (dorkitude) - available at http://github.com/dorkitude/tagalog
 
