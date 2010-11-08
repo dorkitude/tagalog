@@ -87,7 +87,12 @@
         private static function getTagList($tagging) {
             if(!is_array($tagging)) {
                 if(is_string($tagging)) {
-                    $tags = array($tagging);
+                    if(self::isTagTurnedOn($tag)) {
+                        $tags = array($tagging);
+                    }
+                    else {
+                        $tags = array();
+                    }
                 }
                 else {
                     throw new TagalogException("bad tagalog input: 'tagging' must be either a string or an array of strings.");
@@ -162,7 +167,7 @@
 /*    
     <license stuff>
     
-    tagalog.php is licensed under The MIT License
+    Tagalog.php is licensed under The MIT License
 
     Copyright (c) 2010 Kyle Wild (dorkitude) - available at http://github.com/dorkitude/tagalog
 
