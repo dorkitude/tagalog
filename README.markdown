@@ -25,7 +25,7 @@ In traditional logging and in today's standard logging libraries like Ruby's [Lo
 
 ####Tagalog is easy to implement
 You only need to know one function:
-    Tagalog.log(message, tagging)
+    Tagalog::log(message, tagging)
 ...where 'message' is a string or a stringable type[(?)](https://gist.github.com/e612159e53782a28b30b), and 'tagging' is either a string tag or an array of string tags.
 
 ####Tagalog is extensible
