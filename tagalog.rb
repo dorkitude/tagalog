@@ -1,0 +1,71 @@
+require 'json'
+
+class Tagalog
+  
+  
+  # configure this inline or extend and override
+  @@config = {
+    # this path can be relative or absolute
+    :log_file_path => "/var/log/tagalog.log",
+    
+    # set this to true if you want ALL logging turned off:
+    :kill_switch => false,
+
+    # turn tags on and off here:
+    :tags =>  {
+      :sup => false,
+      :tag_2 => false,
+      :tag_3 => true,
+    }
+  }
+  
+  # @param message - mixed - something that can be cast as a string -- JSON for hashes/arrays coming soon 
+  # @param tagging - mixed - a tag symbol or an array of tag symbols
+  # @return boolean - whether or not logging occurred
+  def self.log(message, tagging=:untagged)
+    return false if @@config[:kill_switch]
+
+    tag_list = self.get_tag_list tagging
+    return false if tag_list.empty?
+    
+    message = self.format_message message
+    
+    time_string = Time.now.strftime("%Y-%m-%d @ %H:%m:%S")
+    
+    for tag in tag_list
+      this_message = "#{time_string} [ #{tag} ]  #{message}"
+      self.write_message this_message
+    end
+    return true
+  end
+  
+  def self.format_message message
+    if message.class == Hash || message.class == Array
+      message = message.to_json
+    end
+  end
+  
+  def self.write_message message
+    path = @@config[:log_file_path]
+    puts message
+  end
+  
+
+  def self.get_tag_list(tagging)
+    if tagging.class == Symbol
+      tags = [tagging]
+    elsif tagging.class == Array
+      # filter out any tags that are set to false in the config
+      tags = tagging.select {|tag| !(@@config[:tags].has_key?(tag) && !@@config[:tags][tag] )}
+    else
+      raise TagalogException, "tagging must be a symbol or an array."
+    end
+    
+    return tags
+  end # self.get_tag_list
+  
+end  # class Tagalog
+
+class TagalogException < Exception
+  # pass
+end
