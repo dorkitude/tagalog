@@ -12,9 +12,9 @@
             
             // turn tags on and off here:
             "tags" => array( 
-                // "tag 1" => false,
-                "tag2" => false
-                // "tag 3" => true
+                "tag.1" => false,
+                "tag2" => false,
+                "tag 3" => true,
             ),
         );
 
