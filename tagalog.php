@@ -87,7 +87,7 @@
         private static function getTagList($tagging) {
             if(!is_array($tagging)) {
                 if(is_string($tagging)) {
-                    if(self::isTagTurnedOn($tag)) {
+                    if(self::isTagTurnedOn($tagging)) {
                         $tags = array($tagging);
                     }
                     else {
