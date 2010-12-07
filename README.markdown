@@ -29,7 +29,7 @@ You only need to know one function:
 ...where 'message' is a string or a stringable type[(?)](https://gist.github.com/e612159e53782a28b30b), and 'tagging' is either a string tag or an array of string tags.
 
 ####Tagalog is extensible
-If you want to have two subclasses for Tagalog, like "DebugLogger"" and "ErrorLogger", you can do so quite easily.  Just extend Tagalog and override what you want to override, such as the path to the output file (ErrorLogger could write to your webserver error logs, for instance)
+If you want to have two subclasses for Tagalog, like "DebugLogger"" and "ErrorLogger", you can do so quite easily.  Just extend Tagalog and override what you want to override, such as the path to the output file (ErrorLogger could write to your webserver's error logs, for instance)
 
 ####Tagalog is minimal
-Tagalog is one drop-in file, and is expressed in so little code that you can learn your way around it in just a few minutes.
+Tagalog is one drop-in file and is expressed in so little code that you can learn your way around it in just a few minutes.
