@@ -53,9 +53,9 @@ class Tagalog
   
 
   def self.get_loggable_tags(tagging)
-    if tagging.class == Symbol
-      tags = [tagging]
-    elsif tagging.class == Array
+    tags = [tagging] if tagging.class == Symbol
+
+    if tagging.class == Array
       # filter out any tags that are set to false in the config
       tags = tagging.select {|tag| !(@@config[:tags].has_key?(tag) && !@@config[:tags][tag] )}
     else
