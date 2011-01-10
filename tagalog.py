@@ -63,12 +63,12 @@ def get_date_string():
 def format_message(message):
   if type(message) == type("hi"):
     return message
-  
-  if type(message) == type([]):
+  elif type(message) == type([]):
+    return message
+  elif type(message) == type({}):
     return message
   
-  if type(message) == type({}):
-    return message
+  else raise TagalogException("Unsupported message type (currently only string, list, and dictionary are supported)")
     
     
   
