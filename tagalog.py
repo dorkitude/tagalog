@@ -10,7 +10,6 @@
 #   You can turn logging on or off for a given tag in the CONFIG AREA.
 
 
-
 import datetime
 
 # THIS IS THE CONFIG AREA -- edit inline, or extend/override
@@ -33,7 +32,6 @@ config = {
     'untagged' : True, # this one is special
   },
 }
-
 
 def log(message, tag_input='untagged'):
   if config['kill_switch']:
@@ -65,7 +63,6 @@ def get_loggable_tags(tag_input):
   else:
     raise TagalogException("Unsupported tag type. You must use a string or a list of strings (you sent %s )" % type(tag_input))
   
-  
   return [tag for tag in tag_list if is_tag_loggable(tag)]
 
 def is_tag_loggable(tag):
@@ -86,15 +83,10 @@ def format_message(message):
   
   else:
     raise TagalogException("Unsupported message type. Currently only string, list, and dictionary are supported (you sent %s )" % type(message))
-    
-    
-  
   
 
 class TagalogException (Exception):
   pass
-  
-  
   
   
 # <license stuff>

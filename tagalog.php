@@ -13,7 +13,6 @@
      *    You can turn logging on or off for a given tag in the CONFIG AREA.
      */
 
-
     class Tagalog {
         
         // THIS IS THE CONFIG AREA -- edit inline, or extend/override
@@ -148,7 +147,7 @@
             
             return ($config['tags'][$tag]);
         }
-
+        
 
         
     } // end Tagalog
