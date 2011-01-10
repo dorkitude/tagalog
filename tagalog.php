@@ -62,7 +62,7 @@
         private static function formatMessage($message) {
             // serialize arrays
             if (is_array($message)) {
-                $message = json_encode($message);    
+                $message = print_r($message, true);    
             }
             else {
                 try {
