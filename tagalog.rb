@@ -2,7 +2,6 @@ require 'json'
 
 class Tagalog
   
-  
   # configure this inline or extend and override
   @@config = {
     # this path can be relative or absolute
@@ -16,6 +15,7 @@ class Tagalog
       :sup => false,
       :tag_2 => false,
       :tag_3 => true,
+      :off => false,
     }
   }
   
@@ -48,13 +48,22 @@ class Tagalog
 
   def self.write_message message
     path = @@config[:log_file_path]
-    puts message
+
+    # turn absolute paths into relative ones
+    if path[0,1] != '/'
+      path = File.dirname(__FILE__) + '/' + path
+    end
+    
+    open(path, 'a') { |f|
+      f.puts message
+    }
   end
   
 
   def self.get_loggable_tags(tagging)
     if tagging.class == Symbol
-      tags = [tagging]
+      tags = []
+      tags = [tagging] unless @@config[:tags].has_key?(tagging) && !@@config[:tags][tagging]
     elsif tagging.class == Array
       # filter out any tags that are set to false in the config
       tags = tagging.select {|tag| !(@@config[:tags].has_key?(tag) && !@@config[:tags][tag] )}
