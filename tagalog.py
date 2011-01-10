@@ -36,7 +36,7 @@ def log(message, tag_input='untagged'):
   return_me = False
   
   for tag in loggable_tags:
-    write_me = "%s [ %s] %s\n" % (date_string, tag, message)
+    write_me = "%s [ %s ] %s\n" % (date_string, tag, message)
     log_file.write(write_me)
     return_me = True
   
