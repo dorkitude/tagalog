@@ -39,12 +39,9 @@ def log(message, tag_input):
   return True
 
 def get_loggable_tags(tag_input):
-  print tag_input
   if type(tag_input) == type(""):
-    print "its string"
     tag_list = [tag_input]
   elif type(tag_input) == type([]):
-    print "its list"
     tag_list = tag_input
   else:
     raise TagalogException("Unsupported tag type. You must use a string or a list of strings (you sent %s )" % type(tag_input))
