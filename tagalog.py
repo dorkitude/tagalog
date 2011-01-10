@@ -11,6 +11,7 @@ config = {
   # turn logging on and off here for various tags:
   'tags' : {
     'sup' : False,
+    'tag_1' : False,
     'tag_2' : False,
     'tag_3' : True,
     'off' : False,

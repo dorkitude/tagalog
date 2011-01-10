@@ -13,6 +13,7 @@
             // turn tags on and off here:
             "tags" => array( 
                 "sup" => false,
+                "tag_1" => false,
                 "tag_2" => false,
                 "tag_3" => true,
                 "off" => false,

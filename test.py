@@ -23,7 +23,7 @@ my_dict = {
   'what?' : 13511,
 }
 
-tagalog.log(my_dict, ['tag_3', 'tag_2', 'tag_1'])
+tagalog.log(my_dict, ['tag_1', 'tag_2', 'tag_3'])
 
 
 # test a tag that's off

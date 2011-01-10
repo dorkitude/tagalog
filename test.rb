@@ -15,7 +15,7 @@ hash = {
   :chunky => 'bacon!!!!!!!',
   :what? => 13511,
 }
-Tagalog::log(hash, [:tag1, :tag2])
+Tagalog::log(hash, [:tag_1, :tag_2, :tag_2])
 
 
 # test a tag that's off

@@ -24,7 +24,7 @@ $my_dict = array(
   'what?' => 13511,
 );
 
-Tagalog::log($my_dict, array('tag_3', 'tag_2', 'tag_1'));
+Tagalog::log($my_dict, array('tag_1', 'tag_2', 'tag_3'));
 
 
 // test a tag that's off
