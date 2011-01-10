@@ -24,7 +24,7 @@ $my_assoc = array(
   'what?' => 13511,
 );
 
-Tagalog::log($my_assoc, 'assoc_test'));
+Tagalog::log($my_assoc, 'assoc_test');
 
 
 // test a tag that's off
@@ -33,5 +33,5 @@ Tagalog::log($my_assoc, 'off');
 // test a tag that's on
 Tagalog::log('forced logging message', 'force');
 
-// test default case
+# test default untagged case
 Tagalog::log('untagged message');
