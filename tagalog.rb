@@ -57,7 +57,7 @@ class Tagalog
     open(path, 'a') { |f|
       f.puts message
     }
-  end
+  end # /self.log
   
 
   def self.get_loggable_tags(tagging)
@@ -72,9 +72,10 @@ class Tagalog
     end
 
     return tags
-  end # self.get_loggable_tags
+  end # /self.get_loggable_tags
   
-end  # class Tagalog
+end  # /class Tagalog
+
 
 class TagalogException < Exception
   # pass
