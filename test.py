@@ -27,3 +27,6 @@ tagalog.log(my_dict, 'off')
 
 
 tagalog.log('forced logging message', 'force')
+
+
+tagalog.log('untagged message', 'untagged')
