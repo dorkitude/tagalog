@@ -15,6 +15,7 @@ config = {
     'tag_3' : True,
     'off' : False,
     'force' : True,
+    'untagged' : True,
   },
 }
 
