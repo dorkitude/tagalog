@@ -3,7 +3,7 @@
 
     class Tagalog {
         
-        protected static $config = array(
+        public static $config = array(
             // this path can be relative or absolute
             "log_file_path" => "/var/log/tagalog.log",
             
