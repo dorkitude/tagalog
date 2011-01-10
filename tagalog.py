@@ -47,7 +47,7 @@ def get_loggable_tags(tag_input):
     print "its list"
     tag_list = tag_input
   else:
-    raise TagalogException("Unsupported tag type (you must use a string or a list of strings)")
+    raise TagalogException("Unsupported tag type. You must use a string or a list of strings (you sent %s )" % type(tag_input))
   
   
   return [tag for tag in tag_list if is_tag_loggable(tag)]
@@ -68,7 +68,8 @@ def format_message(message):
   elif type(message) == type({}):
     return message
   
-  else raise TagalogException("Unsupported message type (currently only string, list, and dictionary are supported)")
+  else:
+    raise TagalogException("Unsupported message type. Currently only string, list, and dictionary are supported (you sent %s )" % type(message))
     
     
   
