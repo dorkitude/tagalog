@@ -6,15 +6,6 @@ require_once('tagalog.php');
 // nothing should happen:
 // Tagalog::$config['kill_switch'] = true;
 
-// force a tag type exception
-// Tagalog::log("message", {"unsupported" : "tag type"})
-
-
-// force a message type exception
-// import logging
-// Tagalog::log(logging, 'tag')
-
-
 // test array of tags
 Tagalog::log('my message', array('tag_1', 'tag_2', 'tag_3'));
 
@@ -38,3 +29,11 @@ Tagalog::log("unconfigured_tag", 'unconfigured_tag');
 
 // test default untagged case
 Tagalog::log('untagged message');
+
+// üncomment to force a tag type exception:
+// Tagalog::log("message", {"unsupported" : "tag type"})
+
+// üncomment to force a message type exception:
+// import logging
+// Tagalog::log(logging, 'tag')
+

@@ -1,12 +1,6 @@
 require './tagalog.rb'
 
 
-# force a tag type exception:
-# Tagalog::log("message", {:unsupported => 'tag type'})
-
-# force a message type exception:
-# Tagalog::log(Time, :tag)
-
 # test array of tags
 Tagalog::log('my message', [:tag_1, :tag_2, :tag_3])
 
@@ -32,10 +26,9 @@ Tagalog::log('untagged message')
 
 
 
+# uncomment to force a tag type exception:
+# Tagalog::log("message", {:unsupported => 'tag type'})
 
-
-# TODO test for type-checking message
-
-# TODO test for type-checking tagging
-
+# uncomment to force a message type exception:
+# Tagalog::log(Time, :tag)
 

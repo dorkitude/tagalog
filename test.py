@@ -5,15 +5,6 @@ import tagalog
 # tagalog.config['kill_switch'] = True
 
 
-# force a tag type exception
-# tagalog.log("message", {"unsupported" : "tag type"})
-
-
-# force a message type exception
-# import logging
-# tagalog.log(logging, 'tag')
-
-
 # test array of tags
 tagalog.log('my message', ['tag_1', 'tag_2', 'tag_3'])
 
@@ -37,3 +28,12 @@ tagalog.log("unconfigured_tag", 'unconfigured_tag')
 
 # test default untagged case
 tagalog.log('untagged message')
+
+
+# uncomment to force a tag type exception:
+# tagalog.log("message", {"unsupported" : "tag type"})
+
+# uncomment to force a message type exception:
+# import logging
+# tagalog.log(logging, 'tag')
+
