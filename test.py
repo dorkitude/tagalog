@@ -33,4 +33,4 @@ tagalog.log(my_dict, 'off')
 tagalog.log('forced logging message', 'force')
 
 # test default case
-tagalog.log('untagged message', 'untagged')
+tagalog.log('untagged message')

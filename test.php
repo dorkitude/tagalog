@@ -34,4 +34,4 @@ Tagalog::log($my_dict, 'off');
 Tagalog::log('forced logging message', 'force');
 
 // test default case
-Tagalog::log('untagged message', 'untagged');
+Tagalog::log('untagged message');
