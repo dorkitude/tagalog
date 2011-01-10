@@ -39,12 +39,15 @@ def log(message, tag_input):
   return True
 
 def get_loggable_tags(tag_input):
+  print tag_input
   if type(tag_input) == type(""):
+    print "its string"
     tag_list = [tag_input]
-  elif type(tag_input == type([])):
+  elif type(tag_input) == type([]):
+    print "its list"
     tag_list = tag_input
   else:
-    raise Exception("Unsupported tag type (you must use a string or a list of strings)")
+    raise TagalogException("Unsupported tag type (you must use a string or a list of strings)")
   
   
   return [tag for tag in tag_list if is_tag_loggable(tag)]
@@ -66,3 +69,10 @@ def format_message(message):
   
   if type(message) == type({}):
     return message
+    
+    
+  
+  
+
+class TagalogException (Exception):
+  pass
