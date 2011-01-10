@@ -6,8 +6,11 @@ import tagalog
 
 
 # force a tag type exception
-tagalog.log("message", {"unsupported" : "tag type"})
+# tagalog.log("message", {"unsupported" : "tag type"})
 
+# force a message type exception
+# import logging
+# tagalog.log(logging, 'tag')
 
 
 tagalog.log('my message', ['nice', 'hello?'])
