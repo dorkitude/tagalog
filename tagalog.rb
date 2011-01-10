@@ -1,5 +1,3 @@
-require 'json'
-
 class Tagalog
   
   # configure this inline or extend and override
@@ -21,7 +19,7 @@ class Tagalog
     }
   }
   
-  # @param message - mixed - something that can be cast as a string -- JSON for hashes/arrays coming soon 
+  # @param message - mixed - something that can be cast as a string
   # @param tagging - mixed - a tag symbol or an array of tag symbols
   # @return boolean - whether or not logging occurred
   def self.log(message, tagging=:untagged)
