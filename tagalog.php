@@ -17,7 +17,9 @@
                 "tag_3" => true,
                 "off" => false,
                 "force" => true,
-                "untagged" => true,
+                
+                // the default tag:
+                "untagged" => true, // this one is special
             ),
         );
 

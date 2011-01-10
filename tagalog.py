@@ -15,7 +15,9 @@ config = {
     'tag_3' : True,
     'off' : False,
     'force' : True,
-    'untagged' : True,
+    
+    # the default tag:
+    'untagged' : True, # this one is special
   },
 }
 

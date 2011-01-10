@@ -11,11 +11,14 @@ class Tagalog
     # turn logging on and off here for various tags:
     :tags =>  {
       :sup => false,
+      :tag_1 => false,
       :tag_2 => false,
       :tag_3 => true,
       :off => false,
       :force => true,
-      :untagged => true,
+      
+      # the default tag:
+      :untagged => true, # this one is special
     }
   }
   
