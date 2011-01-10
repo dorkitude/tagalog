@@ -1,6 +1,18 @@
+#   Usage:
+#       Tagalog::log($Whatever_I_Want_To_Log, $tagging);
+# 
+#       Where:
+#           $Whatever_I_Want_To_Log    is something stringable, or an array of stringable things
+#       And:
+#           $tagging    is either a tag string or an array of tag strings
+# 
+# 
+#   You can turn logging on or off for a given tag in the CONFIG AREA.
+
+
 class Tagalog
   
-  # configure this inline or extend and override
+  # THIS IS THE CONFIG AREA -- edit inline, or extend/override
   @@config = {
     # this path can be relative or absolute
     :log_file_path => "/var/log/tagalog.log",
