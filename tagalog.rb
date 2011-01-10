@@ -43,6 +43,8 @@ class Tagalog
   def self.format_message message
     if message.class == Hash || message.class == Array
       message = message.to_json
+    else
+      message
     end
   end # /self.format_message
   
