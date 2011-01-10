@@ -24,6 +24,9 @@ Tagalog::log(hash, :off)
 # test a tag that's on
 Tagalog::log('forced logging message', :force)
 
+# test an unconfigured tag
+Tagalog::log("unconfigured_tag", :unconfigured_tag)
+
 # test default untagged case
 Tagalog::log('untagged message')
 

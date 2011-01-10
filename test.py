@@ -32,5 +32,8 @@ tagalog.log(my_dict, 'off')
 # test a tag that's on
 tagalog.log('forced logging message', 'force')
 
+# test an unconfigured tag
+tagalog.log("unconfigured_tag", 'unconfigured_tag')
+
 # test default untagged case
 tagalog.log('untagged message')
