@@ -31,4 +31,3 @@ Tagalog::log('untagged message')
 
 # uncomment to force a message type exception:
 # Tagalog::log(Time, :tag)
-
