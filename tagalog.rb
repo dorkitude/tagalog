@@ -42,12 +42,14 @@ class Tagalog
   end # /self.log
   
   def self.format_message message
+    
     if message.class == Hash || message.class == Array
-      message = message.to_json
-    else
       message
+    elsif message.class == String
+      message
+    else
+      raise TagalogException, "Message must be a hash, array, or string."
     end
-    # TODO type checking
   end # /self.format_message
   
 
@@ -95,7 +97,7 @@ end
 
 # <license stuff>
 # 
-# tagalog.rb is licensed under The MIT License
+# tagalog is licensed under The MIT License
 # 
 # Copyright (c) 2010 Kyle Wild (dorkitude) - available at http://github.com/dorkitude/tagalog
 # 
