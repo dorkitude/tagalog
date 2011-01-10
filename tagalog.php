@@ -159,14 +159,11 @@
 /* 
 <looky here, full docs!>
 
-    How to use tagalog.php:
-    
+    How to use tagalog.php:    
         1. Modify the $config associative array to suit your fancy
         2. Log something in your app code, like this:  Tagalog::log("Sup world!", "myTag") or this: Tagalog::log("Sup world!", array('tag1', 'tag2', 'tag3'))
         3. In terminal, do "tail -f <pathToLogFile>" (without the less-than and greater-than signs)
-
-
-
+        
     Example of how TAGS work:
     
         If this were your $config:

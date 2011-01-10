@@ -65,8 +65,6 @@ class Tagalog
       message
     else
       raise TagalogException, "Message must be a hash, array, symbol, or string."
-
-
      # TODO: In the Exception message, tell me what class I sent.
      # When I get off this plane, I will need to ask a rubyist why this doesn't work:
        # raise TagalogException, "Message must be a hash, array, or string.  You sent " + message.class
@@ -114,12 +112,6 @@ end  # /class Tagalog
 class TagalogException < Exception
   # pass
 end
-
-
-
-
-
-
 
 
 # <license stuff>
