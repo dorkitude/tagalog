@@ -44,7 +44,7 @@ class Tagalog
     
     message = self.format_message message
     
-    time_string = Time.now.strftime("%Y-%m-%d @ %H:%m:%S")
+    time_string = Time.now.strftime("%Y-%m-%d @ %H:%M:%S")
     
     return_me = false
     
