@@ -25,6 +25,9 @@ Tagalog::log("unconfigured_tag", :unconfigured_tag)
 Tagalog::log('untagged message')
 
 
+# test a symbol message
+Tagalog::log(:my_symbol_message, :ruby_only)
+
 
 # uncomment to force a tag type exception:
 # Tagalog::log("message", {:unsupported => 'tag type'})

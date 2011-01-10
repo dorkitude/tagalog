@@ -47,12 +47,12 @@ class Tagalog
   
   def self.format_message message
     
-    if message.class == Hash || message.class == Array
+    if message.class == Hash || message.class == Array || message.class == Symbol
       message
     elsif message.class == String
       message
     else
-      raise TagalogException, "Message must be a hash, array, or string."
+      raise TagalogException, "Message must be a hash, array, symbol, or string."
 
 
      # TODO: In the Exception message, tell me what class I sent.
