@@ -47,6 +47,7 @@ class Tagalog
     else
       message
     end
+    # TODO type checking
   end # /self.format_message
   
 

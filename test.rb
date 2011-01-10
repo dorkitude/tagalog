@@ -13,3 +13,8 @@ Tagalog::log(hash, :off)
 
 
 Tagalog::log('forced logging message', :force)
+
+
+# TODO test for type-checking message
+
+# TODO test for type-checking tagging
