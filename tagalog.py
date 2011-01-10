@@ -1,10 +1,10 @@
 #   Usage:
-#       Tagalog::log($Whatever_I_Want_To_Log, $tagging);
+#       Tagalog::log(Whatever_I_Want_To_Log, tagging);
 # 
 #       Where:
-#           $Whatever_I_Want_To_Log    is something stringable, or an array of stringable things
+#           Whatever_I_Want_To_Log    is something stringable, or a list of stringable things
 #       And:
-#           $tagging    is either a tag string or an array of tag strings
+#           tagging    is either a tag string or a list of tag strings
 # 
 # 
 #   You can turn logging on or off for a given tag in the CONFIG AREA.
