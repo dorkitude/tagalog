@@ -19,7 +19,7 @@ config = {
 }
 
 
-def log(message, tag_input):
+def log(message, tag_input='untagged'):
   if config['kill_switch']:
     return None
     
