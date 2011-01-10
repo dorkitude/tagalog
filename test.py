@@ -15,7 +15,7 @@ import tagalog
 
 
 # test array of tags
-tagalog.log('my message', ['nice', 'hello?'])
+tagalog.log('my message', ['tag_1', 'tag_2', 'tag_3'])
 
 # test dictionary inputs
 my_dict = {
@@ -23,7 +23,7 @@ my_dict = {
   'what?' : 13511,
 }
 
-tagalog.log(my_dict, ['tag_1', 'tag_2', 'tag_3'])
+tagalog.log(my_dict, ['dictionary_test'])
 
 
 # test a tag that's off

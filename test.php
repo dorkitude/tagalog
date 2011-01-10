@@ -16,19 +16,19 @@ require_once('tagalog.php');
 
 
 // test array of tags
-Tagalog::log('my message', array('nice', 'hello?'));
+Tagalog::log('my message', array('tag_1', 'tag_2', 'tag_3'));
 
-// test dictionary inputs
-$my_dict = array(
+// test associonary inputs
+$my_assoc = array(
   'chunky' => 'bacon!!!!!!!',
   'what?' => 13511,
 );
 
-Tagalog::log($my_dict, array('tag_1', 'tag_2', 'tag_3'));
+Tagalog::log($my_assoc, 'assoc_test'));
 
 
 // test a tag that's off
-Tagalog::log($my_dict, 'off');
+Tagalog::log($my_assoc, 'off');
 
 // test a tag that's on
 Tagalog::log('forced logging message', 'force');

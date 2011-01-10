@@ -8,14 +8,14 @@ require './tagalog.rb'
 # Tagalog::log(Time, :tag)
 
 # test array of tags
-Tagalog::log('my message', [:nice, :hello?])
+Tagalog::log('my message', [:tag_1, :tag_2, :tag_3])
 
 # test dictionary inputs
 hash = {
   :chunky => 'bacon!!!!!!!',
   :what? => 13511,
 }
-Tagalog::log(hash, [:tag_1, :tag_2, :tag_2])
+Tagalog::log(hash, [:hashtest])
 
 
 # test a tag that's off
@@ -24,8 +24,7 @@ Tagalog::log(hash, :off)
 # test a tag that's on
 Tagalog::log('forced logging message', :force)
 
-
-# test default case
+# test default untagged case
 Tagalog::log('untagged message')
 
 

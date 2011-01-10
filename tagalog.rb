@@ -10,7 +10,6 @@ class Tagalog
 
     # turn logging on and off here for various tags:
     :tags =>  {
-      :sup => false,
       :tag_1 => true,
       :tag_2 => true,
       :tag_3 => true,
