@@ -17,6 +17,7 @@ class Tagalog
       :tag_3 => true,
       :off => false,
       :force => true,
+      :untagged => true,
     }
   }
   
