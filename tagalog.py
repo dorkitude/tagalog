@@ -54,7 +54,7 @@ def get_loggable_tags(tag_input):
   return [tag for tag in tag_list if is_tag_loggable(tag)]
 
 def is_tag_loggable(tag):
-  return config['tags'].has_key(tag) and config['tags'][tag]
+  return (not config['tags'].has_key(tag)) or (config['tags'][tag])
   
 
 def get_date_string():
