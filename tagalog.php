@@ -12,9 +12,12 @@
             
             // turn tags on and off here:
             "tags" => array( 
-                // "tag 1" => false,
-                "tag2" => false
-                // "tag 3" => true
+                "sup" => false,
+                "tag_2" => false,
+                "tag_3" => true,
+                "off" => false,
+                "force" => true,
+                "untagged" => true,
             ),
         );
 
@@ -87,7 +90,7 @@
         private static function getTagList($tagging) {
             if(!is_array($tagging)) {
                 if(is_string($tagging)) {
-                    if(self::isTagTurnedOn($tag)) {
+                    if(self::isTagTurnedOn($tagging)) {
                         $tags = array($tagging);
                     }
                     else {
