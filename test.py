@@ -7,7 +7,7 @@ my_dict = {
   'what?' : 13511,
 }
 
-tagalog.log(my_dict, ['tag1', 'tag2'])
+tagalog.log(my_dict, ['tag_3', 'tag_2', 'tag_1'])
 
 
 tagalog.log(my_dict, 'off')
