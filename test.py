@@ -1,7 +1,14 @@
 import tagalog
 
 
+# nothing should happen:
 # tagalog.config['kill_switch'] = True
+
+
+# force a tag type exception
+tagalog.log("message", {"unsupported" : "tag type"})
+
+
 
 tagalog.log('my message', ['nice', 'hello?'])
 
