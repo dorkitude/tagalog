@@ -1,5 +1,8 @@
 import tagalog
 
+
+# tagalog.config['kill_switch'] = True
+
 tagalog.log('my message', ['nice', 'hello?'])
 
 my_dict = {
