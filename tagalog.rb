@@ -34,11 +34,15 @@ class Tagalog
     
     time_string = Time.now.strftime("%Y-%m-%d @ %H:%m:%S")
     
+    return_me = false
+    
     for tag in loggable_tags
       this_message = "#{time_string} [ #{tag} ]  #{message}"
       self.write_message this_message
+      return_me = true
     end
-    return true
+    
+    return_me
   end # /self.log
   
   def self.format_message message

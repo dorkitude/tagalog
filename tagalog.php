@@ -44,14 +44,18 @@
             $message = self::formatMessage($message);
             $dateString = date('Y-m-d @ H:i:s');
 
+            $returnMe = false;
+            
             foreach($tags as $tag) {
                 $logMessage = "{$dateString} [ {$tag} ] {$message}\n";
                 if(!$attempt = error_log($logMessage, 3, $path)) {
                     throw new TagalogException("tagalog ran into this php error when trying to write to log:" . $php_errormsg );
                 }
+                
+                $returnMe = true;
             }
             
-            return true;
+            return $returnMe;
         }
         
         // @return string

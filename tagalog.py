@@ -33,13 +33,16 @@ def log(message, tag_input='untagged'):
 
   log_file = open(config['log_file_path'], 'a')
   
+  return_me = False
+  
   for tag in loggable_tags:
     write_me = "%s [ %s] %s\n" % (date_string, tag, message)
     log_file.write(write_me)
+    return_me = True
   
   log_file.close()
   
-  return True
+  return return_me
 
 def get_loggable_tags(tag_input):
   if type(tag_input) == type(""):
