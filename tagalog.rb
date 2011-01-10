@@ -10,12 +10,13 @@ class Tagalog
     # set this to true if you want ALL logging turned off:
     :kill_switch => false,
 
-    # turn tags on and off here:
+    # turn logging on and off here for various tags:
     :tags =>  {
       :sup => false,
       :tag_2 => false,
       :tag_3 => true,
       :off => false,
+      :force => true,
     }
   }
   
@@ -37,13 +38,13 @@ class Tagalog
       self.write_message this_message
     end
     return true
-  end
+  end # /self.log
   
   def self.format_message message
     if message.class == Hash || message.class == Array
       message = message.to_json
     end
-  end
+  end # /self.format_message
   
 
   def self.write_message message
@@ -57,7 +58,7 @@ class Tagalog
     open(path, 'a') { |f|
       f.puts message
     }
-  end # /self.log
+  end # /self.write_message
   
 
   def self.get_loggable_tags(tagging)
