@@ -76,6 +76,8 @@ def get_date_string():
 def format_message(message):
   if type(message) == type("hi"):
     return message
+  elif type(message) == type(u'hi'):
+    return message
   elif type(message) == type([]):
     return message
   elif type(message) == type({}):
