@@ -1,5 +1,5 @@
 #   Usage:
-#       Tagalog::log(Whatever_I_Want_To_Log, tagging);
+#       tagalog.log(Whatever_I_Want_To_Log, tagging);
 # 
 #       Where:
 #           Whatever_I_Want_To_Log    is something stringable, or a list of stringable things
