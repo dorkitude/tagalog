@@ -1,4 +1,4 @@
-import tagalog
+from python import tagalog
 
 
 # nothing should happen:

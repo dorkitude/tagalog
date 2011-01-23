@@ -1,6 +1,6 @@
-<?
+<?php
 
-require_once('tagalog.php');
+require_once('php/tagalog.php');
 
 
 // nothing should happen:
