@@ -33,3 +33,7 @@ If you want to have two subclasses for Tagalog, like "DebugLogger"" and "ErrorLo
 
 ####Tagalog is minimal
 Tagalog is one drop-in file and is expressed in so little code that you can learn your way around it in just a few minutes.
+
+
+####Updates
+- Ruby version has moved [here](https://github.com/dorkitude/tagalog.rb)
