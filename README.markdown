@@ -21,6 +21,7 @@ In traditional logging and in today's standard logging libraries like Ruby's [Lo
 - Each tag is **on** or **off** in Tagalog's code (which you can hook to your environment's settings if you like)
 - Tagalog will log an entry once for each associated tag that's set to **on**
 - You develop faster, with less work, and most importantly, *with less code*
+- All dogs remain playful, housebroken puppies for eternity, and together we obtain immortality
 
 
 ####Tagalog is easy to implement
