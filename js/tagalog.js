@@ -1,13 +1,13 @@
 /**
  *
  * This is the JS version of the "tagalog" logging library, described here:
- *
  * http://github.com/dorkitude/tagalog
+ *
  *
  *
  * Usage: 
  *
- * // First, construct a tagalog instance.
+ *     // First, construct a tagalog instance.
  *     // (you probably want to do this somewhere in your <HEAD>):
  *     tagalog = new Tagalog({
  *
@@ -34,15 +34,16 @@
  *              myLogger.log(message);
  *          },
  *
+ *
  *          // `killSwitch`
- *          // You probably want this to be true in production, false in dev.
- *          // If true, this will completely neutralize tagalog:
+ *          // You may want this to be 'true' in production.
+ *          // If true, this would neutralize tagalog:
  *          killSwitch: false,
  *
  *      });
  *
  *
- * // Next, use your new instance of Tagalog to log stuff!
+ *      // Next, use your new instance of Tagalog to log stuff!
  *      tagalog.log("my message", "a tag for the message");
  *      tagalog.log("my message #2", ["tag1", "tag2"]);
  *
@@ -168,17 +169,17 @@ Tagalog = new Class({
                         var i, len = _obj.length;
 
                         for (i = 0; i < len-1; i++) { 
-                            str += serialize(_obj[i]) + ','; 
+                            str += this.messageFormatter(_obj[i]) + ','; 
                         }
 
-                        str += serialize(_obj[i]) + ']';
+                        str += this.messageFormatter(_obj[i]) + ']';
                     }
                     else
                     {
                         str = '{';
                         var key;
                         for (key in _obj) { 
-                            str += key + ':' + serialize(_obj[key]) + ','; 
+                            str += key + ':' + this.messageFormatter(_obj[key]) + ','; 
                         }
                         str = str.replace(/\,$/, '') + '}';
                     }
@@ -341,3 +342,4 @@ Tagalog = new Class({
     // Don't put anything below this line:
     noTrailingComma: true
 });
+
