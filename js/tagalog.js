@@ -138,6 +138,10 @@ Tagalog = new Class({
              *
              */
 
+            if (typeof(message) == undefined) {
+                return "undefined";
+            }
+
             var _obj = message;
 
             // Let Gecko browsers do this the easy way
