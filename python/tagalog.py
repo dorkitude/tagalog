@@ -75,12 +75,14 @@ def get_date_string():
 
 def format_message(message):
     try:
-        message = str(message)
-    except:
-        raise TagalogException("Unsupported message type %s. Casting as a string failed." % type(message))
+        if type(message) is unicode:
+            message = message.encode("utf-8") 
+        else:
+            message = str(message)
+    except Exception, e:
+        raise TagalogException("Unsupported message type `{}`. Casting as a string failed with: {}".format(type(message), e))
     
     return message
-        
     
 
 class TagalogException (Exception):
